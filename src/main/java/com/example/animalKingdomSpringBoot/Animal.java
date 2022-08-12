@@ -16,7 +16,7 @@ abstract public class Animal {
         return animal.getGender().equals(Gender.BOTH);
     }
 
-    final public String name;
+    public String name;
 
     final public Gender gender;
     final public Boolean isWarmBlooded;
@@ -63,6 +63,10 @@ abstract public class Animal {
 
     final public String getName() {
         return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Gender getGender() {

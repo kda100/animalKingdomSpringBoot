@@ -1,5 +1,6 @@
 package com.example.animalKingdomSpringBoot;
 
+import com.example.animalKingdomSpringBoot.Mammals.Bat;
 import com.example.animalKingdomSpringBoot.Mammals.Cat;
 import com.google.gson.Gson;
 
@@ -15,6 +16,14 @@ public class AnimalList {
             animalArrayList.add(new Cat("Felix", Animal.genRandomGender()));
         }
         this.animalList = animalArrayList;
+    }
+
+    public void add(String name, Gender gender) {
+        animalList.add(new Bat(name, gender));
+    }
+
+    public void change(int index, String newName) {
+        animalList.get(index).setName(newName);
     }
 
     @Override
